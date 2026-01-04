@@ -26,8 +26,8 @@ screen.onkey(left.down, "s")
 screen.onkey(right.up, "Up")
 screen.onkey(right.down, "Down")
 
-go = True
-while go:
+on = True
+while on:
     sleep(ball.m_speed)
     screen.update()
     ball.move()
@@ -53,7 +53,8 @@ while go:
 
     if score.l_score >= WINNING_SCORE or score.r_score >= WINNING_SCORE:
         score.winner()
-        go = False
+        on = False
 
 
 screen.exitonclick()
+
